@@ -1,48 +1,39 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
   <!-- Sign-up form start -->
-  <h1>
-    Stay updated!
-  </h1>
+  <main>
+    <section class="left">
+      <h1>
+        Stay updated!
+      </h1>
 
-  <p>
-    Join 60,000+ product managers receiving monthly updates on:
-  </p>
+      <p>
+        Join 60,000+ product managers receiving monthly updates on:
+      </p>
 
-  <ul>
-    <li>Product discovery and building what matters</li>
-    <li>Measuring to ensure updates are a success</li>
-    <li>And much more!</li>
-  </ul>
+      <ul>
 
-  And much more!
-
-  Email address
-  email@company.com
-
-  Subscribe to monthly newsletter
-
-  <!-- Sign-up form end -->
-
-  <!-- Success message start -->
-
-  Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com.
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
-
-  <!-- Success message end -->
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-  <SignupForm />
+        <li>
+          <img src="../assets/images/icon-list.svg" alt="">
+          <p>Product discovery and building what matters</p>
+        </li>
+        <li>
+          <img src="../assets/images/icon-list.svg" alt="">
+          <p>Measuring to ensure updates are a success</p>
+        </li>
+        <li>
+          <img src="../assets/images/icon-list.svg" alt="">
+          <p>And much more!</p>
+        </li>
+      </ul>
+      <SignupForm />
+    </section>
+    <section class="right">
+      <div class=""></div>
+    </section>
+  </main>
 </template>
 
 <style scoped>

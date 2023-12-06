@@ -1,5 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  --tomato: hsl(4, 100%, 67%);
+  --dark-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--charcoal-grey);
+}
+
+#app {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  width: 90%;
+  max-width: 50rem;
+  /* padding: 1rem; */
+  background-color: white;
+  border-radius: 10px;
+}
+
+.left {
+  /* background-color: yellow; */
+  background-color: white;
+  padding: 2.5rem;
+  width: 50%;
+}
+
+.right {
+  background-color: green;
+  background-image: url(../assets/images/illustration-sign-up-desktop.svg);
+  background-size: cover;
+  background-position: center center;
+  width: 50%;
+}
+
+h1 {
+  color: var(--dark-grey);
+  font-size: 50px;
+}
+
+ul {
+  margin: 32px 0;
+}
+
+li {
+  list-style: none;
+}
+
+li img {
+  vertical-align: middle;
+  margin: 8px 0;
+  margin-right: 10px;
+}
+
+li p {
+  vertical-align: middle;
+  display: inline;
+}
 
 
 
