@@ -4,7 +4,8 @@
 <template>
   <!-- Sign-up form start -->
   <main>
-    <section class="left">
+    <router-view></router-view>
+    <!-- <section class="left">
       <h1>
         Stay updated!
       </h1>
@@ -27,12 +28,12 @@
           <img src="../assets/images/icon-list.svg" alt="">
           <p>And much more!</p>
         </li>
-      </ul>
+      </ul> 
       <SignupForm />
     </section>
     <section class="right">
       <div class=""></div>
-    </section>
+    </section> -->
   </main>
 </template>
 

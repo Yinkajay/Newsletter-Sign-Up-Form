@@ -4,7 +4,8 @@
             <div class="email-form">
                 <p class="error-text">Valid email required</p>
                 <label for="email">Email address</label>
-                <input type="email" v-model="emailAddress" name="email" id="email" placeholder="email@company.com" :on-change="checkValidity(emailAddress)">
+                <input type="email" v-model="emailAddress" name="email" id="email" placeholder="email@company.com"
+                    :on-change="checkValidity(emailAddress)">
             </div>
             <button :disabled="!emailIsValid">Subscribe to monthly newsletter</button>
         </form>
@@ -14,6 +15,9 @@
 
 
 <script>
+import { useRouter } from 'vue-router';
+
+const router = useRouter()
 export default {
     data() {
         return {
@@ -32,6 +36,7 @@ export default {
             }
             this.emailIsValid = true
         }
+
     }
 }
 </script>
