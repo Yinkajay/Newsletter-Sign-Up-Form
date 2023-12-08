@@ -1,5 +1,5 @@
 <template>
-<h1>Success</h1>
+<SuccessCard />
 </template>
 
 <script>

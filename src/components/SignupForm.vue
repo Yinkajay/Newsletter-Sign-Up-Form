@@ -1,13 +1,13 @@
 <template>
     <section>
-        <form>
+        <form @submit.prevent="submitForm">
             <div class="email-form">
-                <p class="error-text">Valid email required</p>
+                <p class="error-text" v-if="invalidSubmission">Valid email required</p>
                 <label for="email">Email address</label>
-                <input type="email" v-model="emailAddress" name="email" id="email" placeholder="email@company.com"
-                    :on-change="checkValidity(emailAddress)">
+                <input :class="{ 'error-input': invalidSubmission, '': !invalidSubmission }" type="email" v-model="emailAddress" name="email" id="email" placeholder="email@company.com"
+                    @input="checkValidity(emailAddress)">
             </div>
-            <button :disabled="!emailIsValid">Subscribe to monthly newsletter</button>
+            <button>Subscribe to monthly newsletter</button>
         </form>
 
     </section>
@@ -22,7 +22,8 @@ export default {
     data() {
         return {
             emailAddress: '',
-            emailIsValid: false
+            emailIsValid: false,
+            invalidSubmission: false
         }
     },
     computed: {
@@ -35,6 +36,14 @@ export default {
                 return
             }
             this.emailIsValid = true
+        },
+        submitForm() {
+            if (!this.emailIsValid) {
+                this.invalidSubmission = true
+                return
+            } else {
+                this.$router.replace('/success')
+            }
         }
 
     }
@@ -62,6 +71,16 @@ label {
     font-weight: bold;
 }
 
+.error-input{
+    border-color: var(--tomato);
+    background-color: hsla(4, 100%, 67%, 0.4);
+}
+
+.error-input:focus, .error-input:active{
+    border-color: var(--tomato);
+    outline: 1.5px solid var(--tomato);
+}
+
 input {
     width: 100%;
     padding: 8px 12px;
@@ -70,7 +89,7 @@ input {
     margin: 12px 0;
 }
 
-button {
+/* button {
     background-color: var(--dark-grey);
     color: white;
     width: 100%;
@@ -88,5 +107,5 @@ button:disabled {
 button:hover {
     background-color: var(--tomato);
     box-shadow: 0px 6px 12px 2px rgba(255, 98, 87, 0.6);
-}
+} */
 </style>
