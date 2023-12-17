@@ -45,6 +45,10 @@ section {
     height: 100%;
 }
 
+span{
+    font-weight: bold;
+}
+
 @media(max-width: 500px) {
     section {
         max-width: 100%;
