@@ -8,7 +8,7 @@ import router from './router'
 const app = createApp(App)
 
 app.component('SignupForm', SignupForm)
-app.component( 'SuccessCard', SuccessCard)
+app.component('SuccessCard', SuccessCard)
 
 app.use(router)
 

@@ -17,7 +17,7 @@
                     <p>And much more!</p>
                 </li>
             </ul>
-            <SignupForm />
+            <SignupForm @submit-email="handleSubmit" />
         </section>
         <section class="right">
             <div class=""></div>
@@ -27,7 +27,19 @@
 
 
 <script>
-
+export default {
+    data() {
+        return {
+            mail: ''
+        }
+    },
+    methods: {
+        handleSubmit(data) {
+            this.mail = data
+            return
+        },
+    }
+}
 </script>
 
 

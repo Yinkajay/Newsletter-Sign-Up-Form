@@ -1,14 +1,16 @@
 <template>
-<SuccessCard />
+    <SuccessCard />
 </template>
 
 <script>
 import SuccessCard from '../components/SuccessCard.vue'
 export default {
-    components: SuccessCard
+    components: SuccessCard,
+    data() {
+        return {
+        }
+    }
 }
 </script>
 
-<style>
-
-</style>
+<style></style>
